@@ -1,0 +1,78 @@
+/*.FontGallery {
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  font-size: 100px;
+}*/
+
+/* style */
+body {
+  font-family: "Nunito", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #eee;
+}
+
+/*Judul Start*/
+h1 {
+  font-size: 80px;
+  margin: 30px auto;
+  text-align: center;
+  text-shadow: 0px 0px 3px white;
+}
+/*Judul End*/
+
+/*Container Start*/
+.container {
+  width: 900px;
+  background-color: white;
+  margin: auto;
+  padding: 50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+/*Container End*/
+
+/*Gallery Start*/
+.gallery li {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* overflow: hidden; */
+  border: 5px solid rgb(135, 135, 135);
+  float: left;
+  margin-right: 15px;
+  position: relative;
+}
+
+.gallery li img {
+  border-radius: 50%;
+}
+
+.gallery li span {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(8, 8, 8, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  font-size: 30px;
+  top: 0;
+  text-align: center;
+  line-height: 200px;
+  color: white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.gallery li a:hover span {
+  opacity: 1;
+}
+
+.clear {
+  clear: both;
+}
+/*Gallery End*/
