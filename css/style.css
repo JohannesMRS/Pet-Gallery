@@ -76,3 +76,18 @@ h1 {
   clear: both;
 }
 /*Gallery End*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.6s;
+}
+
+.overlay:target {
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
