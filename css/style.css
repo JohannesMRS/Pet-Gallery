@@ -14,6 +14,8 @@ body {
   font-weight: 500;
   font-style: normal;
   background-color: #eee;
+  background-image: url(../img/full/job562-nunoon-10.jpg);
+  background-size: 100%;
 }
 
 /*Judul Start*/
@@ -28,7 +30,7 @@ h1 {
 /*Container Start*/
 .container {
   width: 900px;
-  background-color: white;
+  background-color: rgba(246, 243, 243, 0.7);
   margin: auto;
   padding: 50px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
@@ -109,6 +111,51 @@ h1 {
   animation: animasiZoomIn 0.5s;
 }
 
+.overlay:target .next {
+  animation: animasiNext 0.5s 0.5s forwards;
+}
+.overlay:target .prev {
+  animation: animasiPrev 0.5s 0.5s forwards;
+}
+
+/*next navigasi start*/
+.next,
+.prev {
+  width: 53px;
+  height: 53px;
+  background-image: url(../img/full/arrow_forward_ios_53dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
+  position: absolute;
+  text-indent: -9999px;
+  top: 50%;
+  margin-left: 20px;
+  opacity: 0;
+}
+
+.prev {
+  background-image: url(../img/full/arrow_back_ios_53dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.png);
+  margin-left: -60px;
+}
+/*next navigasi end*/
+
+/*animation next dan prev navigasi start*/
+@keyframes animasiNext {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animasiPrev {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*animation next dan prev navigasi end*/
 /*animasi zoom in start*/
 @keyframes animasiZoomIn {
   0% {
