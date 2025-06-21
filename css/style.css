@@ -48,7 +48,7 @@ h1 {
   position: relative;
 }
 
-.gallery li img {
+.gallery li a img {
   border-radius: 50%;
 }
 
@@ -78,16 +78,53 @@ h1 {
 /*Gallery End*/
 
 .overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0);
   z-index: 9999;
-  transition: 0.6s;
+  transition: 0.3s;
+  text-align: center;
+  padding: 80px 0;
 }
 
 .overlay:target {
+  width: auto;
+  height: auto;
   bottom: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay img {
+  max-height: 100%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.overlay:target img {
+  animation: animasiZoomIn 0.5s;
+}
+
+/*animasi zoom in start*/
+@keyframes animasiZoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/*animasi zoom in end*/
+
+.overlay .close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
 }
